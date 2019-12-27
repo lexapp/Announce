@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap');
+
+body {
+  font-family: sans-serif;
+  background-color: #ffffff;
+  overflow: auto;
+  }
+
+/* Make content area fill the entire browser window */
+html,
+.fullscreen {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+/* Center the content in the browser window */
+.container {
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+h1.title{
+  font-family: 'Ma Shan Zheng', cursive;
+    line-height: 10px;
+    font-size: 70px;
+}
+
+.margins{
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-bottom: 70px;
+}
+.icon-bar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  border-radius: 25px;
+}
+
+.icon-bar a {
+  float: left;
+  width: 50%;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 48px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+.newsBox{
+  text-align: center;
+  border-style: solid;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#more {display: none;}

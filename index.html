@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Announce // LHS</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="all">
+        <link rel="manifest" href="manifest.json">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="main.js"></script>
+<script src="https://kit.fontawesome.com/83a6e55483.js" crossorigin="anonymous"></script>
+  </head>
+<body class="fullscreen">
+  <div class="container">
+    <div class="margins">
+    <div id="installed">
+    <h1 class="title">Announce</h1>
+    <h3>By Ali Mosallaei</h3>
+    <br>
+    <p>Welcome to the news app of LHS. Make sure to open this app on your phone, and you can follow the same installation as the Blocks app</p>
+    </div>
+    <div id = "notInst">
+      <center><img src="/icons/icon128.png" alt="logo"></center>
+      <h1 class="title">Announce</h1>
+      <h3>By Ali Mosallaei</h3>
+      <br>
+      <p>Welcome to the news app of LHS. Make sure to open this app on your phone, and you can follow the same installation as the Blocks app: </p>
+      <ul>
+        <li>Click the three lines or share icon at the top of the screen</li>
+        <li>Click "Add to Home"</li>
+        <li>Done! Open "Announce" from your home page.</li>
+      </ul>
+    </div>
+    <!-- FOOTER HERE -->
+    <br>
+    <div class="icon-bar">
+  <a class="active" href="/"><i class="fa fa-home"></i></a> 
+  <a href="/news.html"><i class="fa fa-newspaper"></i></a> 
+</div>
+  </div>
+  </div>
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(function() {
+                console.log('Service Worker Registered');
+          });
+      }
+    </script>
+    <script>
+      var x = document.getElementById("installed");
+      var y = document.getElementById("notInst");
+      x.style.display = "none"
+      y.style.display = "block"
+      if (window.matchMedia('(display-mode: standalone)').matches){
+        x.style.display = "block"
+        y.style.display = "none"
+      }
+</script>
+  </body>
+</html>
