@@ -10,33 +10,54 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="main.js"></script>
 <script src="https://kit.fontawesome.com/83a6e55483.js" crossorigin="anonymous"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   </head>
+
 <body class="fullscreen">
   <div class="container">
+      <div id="header">
+          <h1 class="title">Home</h1>
+        </div>
     <div class="margins">
+          <div id="myCont">
     <div id="installed">
-    <h1 class="title">Announce</h1>
-    <h3>By Ali Mosallaei</h3>
-    <br>
-    <p>Welcome to the news app of LHS. Make sure to open this app on your phone, and you can follow the same installation as the Blocks app</p>
-    </div>
-    <div id = "notInst">
-      <center><img src="/icons/icon128.png" alt="logo"></center>
-      <h1 class="title">Announce</h1>
+    <h4>By Ali Mosallaei</h4>
+    <p>Welcome to the news app of LHS. Click on the newspaper icon to view recent news.</p>
+<p><i>Quick note: This app in no way uses items/code from Ben Borger's "Blocks" app. Please do check out the "Blocks" app if you haven't already: <a href="https://blocks.elk.sh">blocks.elk.sh</a></a></i></p>
+  
+  </div>
+    <div id = "notInst">      <h1 class="title">Announce</h1>
       <h3>By Ali Mosallaei</h3>
       <br>
       <p>Welcome to the news app of LHS. Make sure to open this app on your phone, and you can follow the same installation as the Blocks app: </p>
       <ul>
-        <li>Click the three lines or share icon at the top of the screen</li>
+        <li>Click the three lines or share icon at the top of the screen // <i>Note that on iPhone the "Share" icon can be at the bottom</i></li>
         <li>Click "Add to Home"</li>
         <li>Done! Open "Announce" from your home page.</li>
       </ul>
     </div>
+  </div>
     <!-- FOOTER HERE -->
     <br>
+    <div id = hideME>
     <div class="icon-bar">
-  <a class="active" href="/"><i class="fa fa-home"></i></a> 
-  <a href="/news.html"><i class="fa fa-newspaper"></i></a> 
+  <a class="active" href="/index.html"><i class="fa fa-home"></i></a> 
+  <a href="/news.php"><i class="fa fa-newspaper"></i></a> 
+  <a href="/settings.php"><i class="fa fa-cogs"></i></a> 
+</div>
 </div>
   </div>
   </div>
@@ -51,11 +72,17 @@
     <script>
       var x = document.getElementById("installed");
       var y = document.getElementById("notInst");
+      var z = document.getElementById("hideME");
+      var a = document.getElementById("header")
       x.style.display = "none"
       y.style.display = "block"
+      z.style.display = "none"
+      a.style.display = "none"
       if (window.matchMedia('(display-mode: standalone)').matches){
         x.style.display = "block"
         y.style.display = "none"
+        z.style.display = "block";
+        a.style.display = "block";
       }
 </script>
   </body>
