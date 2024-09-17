@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Enter News</title>
+    <link rel="stylesheet" type="text/css" href="style.css?v=1" media="all">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/83a6e55483.js" crossorigin="anonymous"></script>
+  </head>
+<body class="fullscreen">
+  <div class="container">
+    <div class="margins">
+      <div id = admin>
+        <h1 class="title">Enter News</h1>
+        <br>
+        <form method="post" action="/add_news.php">
+                Title of News:<br>
+                <input type="text" name="title"><br><br>
+                Content of News:<br>
+                <textarea name="news" cols="35" rows="5"></textarea><br><br>
+                Links Associated with This News:<br>
+                <textarea name="links" cols="35" rows="5"></textarea><br><br>
+                <input type="submit" value="Submit">
+        </form>
+        <br>
+        <button onclick="signOut()">SIGN OUT</button>
+        </div>
+        </div>
+        </div>
+        <script>
+          var x = document.getElementById("admin");
+          x.style.display = "none";
+          var isAdmi = localStorage.getItem('isAdmin')
+          if (isAdmi == 1){
+            x.style.display = "block";
+          }
+          function signOut(){
+            localStorage.setItem('isAdmin', 0)
+            window.location.replace("https://lhsannounce.xyz");
+
+
+          }
+        </script>
+            <div class="icon-bar">
+                <a href="/index.html"><i class="fa fa-home"></i></a> 
+                <a href="/news.php"><i class="fa fa-newspaper"></i></a> 
+                <a href="/settings.php"><i class="fa fa-cogs"></i></a> 
+              </div>

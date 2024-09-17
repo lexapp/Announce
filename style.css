@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
 body {
   font-family: sans-serif;
-  background-color: #ffffff;
+  background-color: #c8fdfe;
   overflow: auto;
-  }
+}
 
 /* Make content area fill the entire browser window */
 html,
@@ -13,12 +12,15 @@ html,
   height: 100%;
   margin: 0;
   width: 100%;
+  background-color: #c8fdfe;
+
+}
+p{
+  font-size: 20px;
 }
 
-/* Center the content in the browser window */
 .container {
-  margin: auto;
-  text-align: center;
+  text-align: left;
 }
 
 .title {
@@ -26,7 +28,7 @@ html,
 }
 
 h1.title{
-  font-family: 'Ma Shan Zheng', cursive;
+  font-family: 'Fredoka One', cursive;
     line-height: 10px;
     font-size: 70px;
 }
@@ -38,19 +40,18 @@ h1.title{
 }
 .icon-bar {
   width: 100%;
-  background-color: #555;
+  background-color: #F8F8C2;
   overflow: auto;
   text-align: center;
   position: fixed;
   left: 0;
   bottom: 0;
   margin: 0;
-  border-radius: 25px;
 }
 
 .icon-bar a {
   float: left;
-  width: 50%;
+  width: 33%;
   text-align: center;
   padding: 12px 0;
   transition: all 0.3s ease;
@@ -63,14 +64,38 @@ h1.title{
 }
 
 .active {
-  background-color: #4CAF50;
+  background-color: #c8fdfe;
 }
 
 .newsBox{
+  width: 400px;
   text-align: center;
   border-style: solid;
-  padding-left: 10px;
-  padding-right: 10px;
+  border-width: medium;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  border-radius: 25px;
+  box-sizing: border-box;
 }
 
 #more {display: none;}
+
+#setup_button {
+  display: none;
+}
+
+#header{
+  position: fixed;
+  top: 0;
+  overflow: auto;
+  width: 100%;
+  height: 100px;
+  background-color: #c8fdfe; 
+  padding-left: 15px;
+}
+
+#myCont{
+  overflow: auto;
+  margin-top: 100px;
+}
